@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Controle de acionamento de Relés</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+    <body>
+        <div id="Container-Principal">
+            <div id="Container-Elemento">
+                <div id="teste"><p>Oii</p></div>
+                <div class="Elemento">
+                    <div class="btn">
+                        <p>Relay_1: </p>
+                        <div class="Ligado">
+                            <button id="btn1">
+                                <p>Ligado</p>
+                            </button>
+                        </div>
+                        <div class="Desligado">
+                            <button>
+                                <p>Desligado</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="Elemento">
+                    
+                    <div class="btn">
+                        <p>Relay_2: </p> 
+                            <div class="Ligado">
+                                <button>
+                                    <p>Ligado</p>
+                                </button>
+                            </div>
+                            <div class="Desligado">
+                                <button>
+                                    <p>Desligado</p>
+                                </button>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="Elemento">
+                    <div class="btn">
+                        <p>Relay_3: </p>
+                        <div class="Ligado">
+                            <button>
+                                <p>Ligado</p>
+                            </button>
+                        </div>
+                        <div class="Desligado">
+                            <button>
+                                <p>Desligado</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Elemento">
+                    <div class="btn">
+                        <p>Relay_4: </p>
+                        <div class="Ligado">
+                            <button>
+                                <p>Ligado</p>
+                            </button>
+                        </div>
+                        <div class="Desligado">
+                            <button>
+                                <p>Desligado</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <script type="text/javascript" src="Teste.js" defer></script> -->
+    </body>
+    <script type="module" src="./Teste.js">
+        import { getDatabase, ref, set } from "firebase/database";
+        export function name() {
+            console.log("Kevin")
+        }
+        export function teste() {
+             const db = getDatabase(app);
+             set(ref(db, '/Estado_Relay/'), {
+             Relay_1: 1
+             })};
+        document.getElementById("btn1").addEventListener('click', name)
+      </script>
+</html>
